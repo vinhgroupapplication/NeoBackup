@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_17sdp">
+
+
+        <RelativeLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/dot_"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:background="@drawable/schedule_rectangle_back_blue" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Người gửi trao đổi "
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/content_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nguyễn Hoàng Thanh Tâm"
+                    android:textColor="#4C80BC"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lúc "
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/content_moment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15:59 16/05/2018" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/content_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Về góp ý dự thảo Kể hoạch thành lập trung tâm nghiên cứu mô phỏng dự báo xây dựng chiến lược phát triển kinh tế xã hội"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:textColor="#79C18F"
+                    android:gravity="center"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:background="@drawable/button_radius_green"
+                    android:text="Sửa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_delete"
+                    android:textColor="#CD8775"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:background="@drawable/button_radius_orange"
+                    android:text="Xóa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+        android:id="@+id/list_attach_doc_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+</LinearLayout>

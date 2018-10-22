@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00070b41"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#287CDC"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/statictical_home" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:gravity="center"
+                            android:text="THỐNG KÊ CHỈ ĐẠO"
+                            android:textColor="#ffffff"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/task_time"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:visibility="gone" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="01/01/2017"
+                                    android:textColor="#ffffff" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:src="@drawable/ic_keyboard_arrow_down_white_24dp" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" - "
+                                android:textColor="#ffffff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="01/01/2017"
+                                    android:textColor="#ffffff" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:src="@drawable/ic_keyboard_arrow_down_white_24dp" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/task_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="7dp"
+                        android:gravity="center_vertical|right"
+                        android:text="Tổng 100 nhiệm vụ"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/choose_any_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_left_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray"
+                            android:drawableRight="@drawable/calendar_x1"
+                            android:focusable="false"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:text="01/04/2018"
+                            android:textColor="@android:color/black" />
+
+                        <View
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_date_right"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/end_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray"
+                            android:drawableRight="@drawable/calendar_x1"
+                            android:focusable="false"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:text="01/04/2018"
+                            android:textColor="@android:color/black" />
+
+                        <View
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_view"
+                    android:elevation="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/top_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|bottom"
+                                    android:text="TỔNG NHIỆM VỤ"
+                                   />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_marginBottom="@dimen/_15sdp"
+                               android:layout_alignBottom="@id/progress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_2sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/bgchart_color" />
+
+                            <ProgressBar
+                                android:progress="75"
+                                android:max="100"
+                                android:id="@+id/progress"
+                                style="?android:attr/progressBarStyleSmallTitle"
+                                android:layout_width="@dimen/_160sdp"
+                                android:layout_height="@dimen/_160sdp"
+                                android:layout_centerInParent="true"
+                                android:indeterminate="false" />
+
+                         <!--   android:indeterminateDrawable="@drawable/progress_bar_360_to_0"-->
+                            <LinearLayout
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+
+                                <TextView
+                                    android:text="Tổng nhiệm vụ"
+                                    android:textColor="@color/text_gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:id="@+id/department_process_total"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|top"
+                                    android:text="0"
+                                    android:textColor="#F66D55"
+                                    android:textSize="@dimen/_25sdp" />
+                            </LinearLayout>
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#c4c0c0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:textColor="@android:color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Đã xử lý" />
+
+                            <com.loopeer.shadow.ShadowView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_5sdp"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_2sdp"
+                                app:backgroundColor="#9988BE"
+                                app:cornerRadius="@dimen/_11sdp"
+                                app:foregroundColor="@color/colorAccent"
+                                app:shadowColor="#9988BE"
+                                app:shadowMargin="@dimen/_5sdp"
+                                app:shadowRadius="@dimen/_3sdp">
+
+                                <TextView
+                                    android:id="@+id/department_processed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:lines="1"
+                                    android:singleLine="true"
+                                    android:text="0"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/_14sdp" />
+                            </com.loopeer.shadow.ShadowView>
+
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="match_parent"
+                            android:background="#c4c0c0" />
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:textColor="@android:color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|bottom"
+                                android:text="Chưa xử lý" />
+
+                            <com.loopeer.shadow.ShadowView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_5sdp"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_2sdp"
+                                app:backgroundColor="#0090ff"
+                                app:cornerRadius="@dimen/_11sdp"
+                                app:foregroundColor="@color/colorAccent"
+                                app:shadowColor="#0090ff"
+                                app:shadowMargin="@dimen/_5sdp"
+                                app:shadowRadius="@dimen/_3sdp">
+
+                                <TextView
+                                    android:id="@+id/department_unprocess"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:lines="1"
+                                    android:singleLine="true"
+                                    android:text="0"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/_14sdp" />
+                            </com.loopeer.shadow.ShadowView>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#c4c0c0" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00ffffff"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:textColor="@color/text_gray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|bottom"
+                                    android:text="Đúng hạn" />
+
+                                <com.loopeer.shadow.ShadowView
+                                    android:id="@+id/shadowProcessed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="@dimen/_5sdp"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    android:paddingBottom="@dimen/_2sdp"
+                                    android:paddingLeft="@dimen/_10sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_2sdp"
+                                    app:backgroundColor="#ffffff"
+                                    app:cornerRadius="@dimen/_11sdp"
+                                    app:foregroundColor="@color/colorAccent"
+                                    app:shadowColor="#68ee3b"
+                                    app:shadowMargin="@dimen/_5sdp"
+                                    app:shadowRadius="@dimen/_3sdp">
+
+                                    <TextView
+                                        android:id="@+id/department_process_ontime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:lines="1"
+                                        android:singleLine="true"
+                                        android:text="0"
+                                        android:textColor="#3de29a"
+                                        android:textSize="@dimen/_14sdp" />
+                                </com.loopeer.shadow.ShadowView>
+
+
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:background="#c4c0c0" />
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:textColor="@color/text_gray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|bottom"
+                                    android:text="Trễ hạn" />
+
+
+
+                                <com.loopeer.shadow.ShadowView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="@dimen/_5sdp"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    android:paddingBottom="@dimen/_2sdp"
+                                    android:paddingLeft="@dimen/_10sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_2sdp"
+                                    app:backgroundColor="#ffffff"
+                                    app:cornerRadius="@dimen/_11sdp"
+                                    app:foregroundColor="@color/colorAccent"
+                                    app:shadowColor="#FE6E4C"
+                                    app:shadowMargin="@dimen/_5sdp"
+                                    app:shadowRadius="@dimen/_3sdp">
+
+                                    <TextView
+                                        android:id="@+id/department_process_delays"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:lines="1"
+                                        android:singleLine="true"
+                                        android:text="0"
+                                        android:textColor="#FE6E4C"
+                                        android:textSize="@dimen/_14sdp" />
+                                </com.loopeer.shadow.ShadowView>
+
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:background="#c4c0c0" />
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:textColor="@color/text_gray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|bottom"
+                                    android:text="Trong hạn" />
+
+                                <com.loopeer.shadow.ShadowView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="@dimen/_5sdp"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    android:paddingBottom="@dimen/_2sdp"
+                                    android:paddingLeft="@dimen/_10sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_2sdp"
+                                    app:backgroundColor="#ffffff"
+                                    app:cornerRadius="@dimen/_11sdp"
+                                    app:foregroundColor="@color/colorAccent"
+                                    app:shadowColor="#0090ff"
+                                    app:shadowMargin="@dimen/_5sdp"
+                                    app:shadowRadius="@dimen/_3sdp">
+
+                                    <TextView
+                                        android:id="@+id/department_process_indue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:lines="1"
+                                        android:singleLine="true"
+                                        android:text="0"
+                                        android:textColor="#0090ff"
+                                        android:textSize="@dimen/_14sdp" />
+                                </com.loopeer.shadow.ShadowView>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:background="#c4c0c0" />
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:textColor="@color/text_gray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|bottom"
+                                    android:text="Quá hạn" />
+
+                                <com.loopeer.shadow.ShadowView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="@dimen/_5sdp"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    android:paddingBottom="@dimen/_2sdp"
+                                    android:paddingLeft="@dimen/_10sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_2sdp"
+                                    app:backgroundColor="#ffffff"
+                                    app:cornerRadius="@dimen/_11sdp"
+                                    app:foregroundColor="@color/colorAccent"
+                                    app:shadowColor="#FFB239"
+                                    app:shadowMargin="@dimen/_5sdp"
+                                    app:shadowRadius="@dimen/_3sdp">
+
+                                    <TextView
+                                        android:id="@+id/department_out_of_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:lines="1"
+                                        android:singleLine="true"
+                                        android:text="0"
+                                        android:textColor="#FFB239"
+                                        android:textSize="@dimen/_14sdp" />
+                                </com.loopeer.shadow.ShadowView>
+
+
+
+
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#009A82"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/statictical_home" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:gravity="center"
+                            android:paddingBottom="7.5dp"
+                            android:paddingTop="7.5dp"
+                            android:text="NGƯỜI THEO DÕI"
+                            android:textColor="#ffffff"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="7dp"
+                        android:gravity="center_vertical|right"
+                        android:text="Tổng 100 nhiệm vụ"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/stroke_blank_retangle"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|bottom"
+                                android:text="ĐÃ XỬ LÝ" />
+
+                            <TextView
+                                android:id="@+id/person_processed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|top"
+                                android:text="50"
+                                android:textColor="#0066CC"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/stroke_blank_retangle"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|bottom"
+                                android:text="CHƯA XỬ LÝ" />
+
+                            <TextView
+                                android:id="@+id/person_unprocess"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|top"
+                                android:text="50"
+                                android:textColor="#0066CC"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/stroke_blank_retangle"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|bottom"
+                                android:text="ĐÚNG HẠN" />
+
+                            <TextView
+                                android:id="@+id/person_process_ontime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|top"
+                                android:text="30"
+                                android:textColor="#FF9900"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/stroke_blank_retangle"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|bottom"
+                                android:text="TRỄ HẠN" />
+
+                            <TextView
+                                android:id="@+id/person_process_delays"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|top"
+                                android:text="20"
+                                android:textColor="#DD0000"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/stroke_blank_retangle"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|bottom"
+                                android:text="TRONG HẠN" />
+
+                            <TextView
+                                android:id="@+id/person_process_indue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|top"
+                                android:text="40"
+                                android:textColor="#FF9900"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/stroke_blank_retangle"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|bottom"
+                                android:text="QUÁ HẠN" />
+
+                            <TextView
+                                android:id="@+id/person_out_of_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|top"
+                                android:text="10"
+                                android:textColor="#DD0000"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

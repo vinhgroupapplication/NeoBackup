@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">NeoEGOV</string>
+    <string name="ok">OK</string>
+    <string name="no_connection">Không thể kết nối với internet.</string>
+    <string name="khong_co_ket_noi">Không có kết nối.</string>
+    <string name="please_wait">Xin chờ...</string>
+    <string name="exit_app">Thoát khỏi ứng dụng?</string>
+    <string name="input_login_must_not_null">Vui lòng nhập tên địa chỉ ứng dụng, tên tài khoản, mật khẩu để vào ứng dụng.</string>
+    <string name="confirm_login_error">Vui lòng nhập đầy đủ và chính xác thông tin để truy cập vào hệ thống.</string>
+    <string name="api_server_cloud_message">AIzaSyAn7EEJfLO8nMIFY5tP9aTpBC_vDJlBR_o</string>
+    <string name="continue_offline">Tiếp tục Offline</string>
+    <string name="server_error">Server bị lỗi. Vui lòng thoát chương trình.</string>
+    <string name="chon_chuc_nang">Chọn chức năng</string>
+    <string name="chuyen_ban_giam_doc">Chuyển ban giám đốc</string>
+    <string name="ket_thuc_van_ban">Kết thúc VB</string>
+    <string name="tra_lai">Trả lại</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="khong_co_van_ban_nao">Không có văn bản.</string>
+    <string name="khong_co_nhiem_vu_nao">Không có nhiệm vụ.</string>
+    <string name="khong_co_cong_viec_nao">Không có công việc.</string>
+    <string name="nguoi_xu_ly">Người xử lý</string>
+    <string name="xu_ly_cong_viec">XỬ LÝ CÔNG VIỆC</string>
+    <string name="chi_tiet">Chi Tiết</string>
+    <string name="luan_chuyen">Luân Chuyển</string>
+    <string name="gop_y">Góp ý</string>
+    <string name="nhac_nho">Nhắc nhở</string>
+    <string name="trao_doi">Trao đổi</string>
+    <string name="bao_cao">Báo cáo</string>
+    <string name="thu_gon">Thu gọn</string>
+    <string name="xem_day_du">Xem đầy đủ</string>
+    <string name="khac">Khác</string>
+    <string name="da_luu_vao_hop_thu_di">không thành công do không có kết nối internet, văn bản</string>
+    <string name="chon_nguoi_nhan_thu">Vui lòng chọn người nhận thư !!!</string>
+    <string name="chuyen_that_bai"> không thành công văn bản</string>
+    <string name="chuyen_thanh_cong"> thành công văn bản</string>
+    <string name="chon">Chọn phòng ban</string>
+    <string name="su_co_duong_truyen">Không kết nối được máy chủ</string>
+    <string name="khong_co_du_lieu">Không có dữ liệu !</string>
+    <string name="thoat_chuong_trinh">Thoát</string>
+    <string name="server_address">Địa chỉ truy cập</string>
+    <string name="user_hint">Tên truy cập</string>
+    <string name="pass_hint">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="forget_pass">Quên mật khẩu?</string>
+    <string name="product_name">©2018 NewSaigonSoft Corp</string>
+    <string name="version_of_app">Phiên bản 1.0.0</string>
+    <!--    <string name="egov">EGOV</string>
+    <string name="neo">Neo</string>-->
+    <string name="egov">EGOV</string>
+    <string name="group_title">title notification</string>
+    <string name="neo">Neo</string>
+    <string name="xu_ly_van_ban">Xử lý văn bản</string>
+    <string name="plz_input_server_name">Vui lòng nhập tên địa chỉ ứng dụng.</string>
+    <string name="plz_input_account">Vui lòng nhập tên tài khoản.</string>
+    <string name="plz_input_password">Vui lòng nhập mật khẩu.</string>
+    <string name="plz_input_account_and_password">Vui lòng nhập tên tài khoản, mật khẩu.</string>
+    <string name="plz_input_server_name_and_password">Vui lòng nhập tên địa chỉ ứng dụng, mật khẩu.</string>
+    <string name="plz_input_server_name_and_account">Vui lòng nhập tên địa chỉ ứng dụng, tên tài khoản.</string>
+    <string name="building_function">This function is building. Please waiting</string>
+    <string name="month">Tháng</string>
+    <string name="day">Ngày</string>
+    <string name="year">Năm</string>
+    <string name="anytime">Thời gian bất kỳ</string>
+    <string name="quarter">Quý</string>
+    <string name="don_vi_thuc_hien">Đơn vị thực hiện</string>
+    <string name="nguoi_theo_doi">Người theo dõi</string>
+    <string name="company_name">Công ty Cổ phần Phần mềm Sài Gòn Mới</string>
+    <string name="company_name_english">NewSaiGonSoft Corporation</string>
+    <string name="support"><![CDATA[Tư vấn & hỗ trợ]]></string>
+    <string name="contact_number_nss">+84 (028) 39 849999 | +84 (208) 38 941 938</string>
+    <string name="email">Email</string>
+    <string name="sale_email">sales@newsaigonsoft.com</string>
+    <string name="website">Website</string>
+    <string name="nss_website">www.newsaigonsoft.com</string>
+    <string name="address">Địa chỉ</string>
+    <string name="nss_address">Số 4 Lê Đức Thọ, Phường 7, Q.Gò Vấp, Tp. Hồ Chí Minh</string>
+    <string name="in">Trong</string>
+    <string name="week">Tuần</string>
+    <!-- <com.applandeo.materialcalendarview.CalendarView
+     <array name="material_calendar_months_array">
+         <item>Tháng 01</item>
+         <item>Tháng 02</item>
+         <item>Tháng 03</item>
+         <item>Tháng 04</item>
+         <item>Tháng 05</item>
+         <item>Tháng 06</item>
+         <item>Tháng 07</item>
+         <item>Tháng 08</item>
+         <item>Tháng 09</item>
+         <item>Tháng 10</item>
+         <item>Tháng 11</item>
+         <item>Tháng 12</item>
+     </array>
+     <string name="material_calendar_monday">T2</string>
+     <string name="material_calendar_tuesday">T3</string>
+     <string name="material_calendar_wednesday">T4</string>
+     <string name="material_calendar_thursday">T5</string>
+     <string name="material_calendar_friday">T6</string>
+     <string name="material_calendar_saturday">T7</string>
+     <string name="material_calendar_sunday">CN</string>-->
+    <!--com.prolificinteractive.materialcalendarview.MaterialCalendarView-->
+    <string-array name="custom_weekdays">
+        <item>CN</item>
+        <item>Th 2</item>
+        <item>Th 3</item>
+        <item>Th 4</item>
+        <item>Th 5</item>
+        <item>Th 6</item>
+        <item>Th 7</item>
+    </string-array>
+    <string-array name="custom_months">
+        <item>Tháng 01</item>
+        <item>Tháng 02</item>
+        <item>Tháng 03</item>
+        <item>Tháng 04</item>
+        <item>Tháng 05</item>
+        <item>Tháng 06</item>
+        <item>Tháng 07</item>
+        <item>Tháng 08</item>
+        <item>Tháng 09</item>
+        <item>Tháng 10</item>
+        <item>Tháng 11</item>
+        <item>Tháng 12</item>
+    </string-array>
+</resources>

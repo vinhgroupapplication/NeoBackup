@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TabHost
+            android:id="@+id/tabhost_top_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <include
+                        android:id="@+id/i_layout_1"
+                        layout="@layout/layout_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </TabHost>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_gray" />
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/tab_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAFBFD"
+                android:elevation="@dimen/_5sdp">
+
+                <TabHost
+                    android:id="@+id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--<HorizontalScrollView-->
+                            <!--android:id="@+id/h_scroll_view"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:fillViewport="true"-->
+                            <!--android:scrollbars="none">-->
+
+                            <TabWidget
+                                android:id="@android:id/tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        <!--</HorizontalScrollView>-->
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <include
+                                android:id="@+id/i_layout_1"
+                                layout="@layout/layout_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </TabHost>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_noidung"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"></ListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_gray"
+                android:elevation="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_week"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="#ffffff"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/textview_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/setting_loading_bar"
+                            android:gravity="center"
+                            android:padding="7dp"
+                            android:text="NGÀY"
+                            android:textColor="@color/colorButtonLoadingSetting"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textview_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/setting_loading_bar"
+                            android:padding="7dp"
+                            android:text="TUẦN"
+                            android:textColor="@color/colorButtonLoadingSetting"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title_Schedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="LỊCH CHÍNH THỨC TRONG TUẦN"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/choose_week_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FAFBFD"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/choose_day_previous"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:orientation="vertical"
+                            android:src="@drawable/left_arrow_x1"></ImageView>
+                        <!--<ImageView
+                            android:id="@+id/choose_day_previous"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+    -->
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_day_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="28/04/2018"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:id="@+id/text_day_center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text=" - "
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:id="@+id/text_day_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="04/05/2018"
+                                android:textColor="#000000" />
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/btn_choose_day"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="3dp"
+                            android:src="@drawable/caculator"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/choose_day_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:orientation="horizontal"
+                            android:src="@drawable/right_arrow_x1" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#c4c0c0" />
+
+            </LinearLayout>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/tv32"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textColor="#000000"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/title_day"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:text="Ngày"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="#ffffff">
+
+                            <TextView
+                                android:id="@+id/tv_morning"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Buổi sáng"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:id="@+id/tv_afternoon"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Buổi Chiều"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:id="@+id/tv_evening"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Buổi Tối"
+                                android:textColor="#000000" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </TableRow>
+
+
+            <LinearLayout
+                android:id="@+id/layout_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <pl.droidsonroids.gif.GifTextView
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/happy_new_content" />
+
+                <TextView
+                    android:id="@+id/text_messages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Không có lịch." />
+
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--<TableLayout
+                    android:id="@+id/linear_week_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/monday"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp"
+                            android:text="Thứ 2"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_edittext_troke">
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/monday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tuesday"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp"
+                            android:text="Thứ 3"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_edittext_troke">
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Tuesday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/wednesday"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp"
+                            android:text="Thứ 4"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_edittext_troke">
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Wednesday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/thursday"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp"
+                            android:text="Thứ 5"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_edittext_troke">
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Thursday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/friday"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp"
+                            android:text="Thứ 6"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_edittext_troke">
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/friday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/saturday"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp"
+                            android:text="Thứ 7"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_edittext_troke">
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Saturday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/sunday"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/background_edittext_troke"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp"
+                            android:text="Chủ Nhật"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/background_edittext_troke">
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Sunday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                </TableLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/linear_week_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/gray_line" />
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_monday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_monday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_10sdp"
+                                        android:src="@drawable/wall_clock_x1" />
+
+
+                                    <TextView
+                                        android:id="@+id/monday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="28/04"
+                                        android:textColor="@color/text_gray" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/arrow_monday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:src="@drawable/right_arrow_x1" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray_line"
+                                android:elevation="@dimen/_2sdp" />
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/monday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/gray_line" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_tuesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_4sdp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_tuesday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_10sdp"
+                                        android:src="@drawable/wall_clock_x1" />
+
+
+                                    <TextView
+                                        android:id="@+id/tuesday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="28/04"
+                                        android:textColor="@color/text_gray" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/arrow_tuesday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:src="@drawable/right_arrow_x1" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray_line"
+                                android:elevation="@dimen/_2sdp" />
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Tuesday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/gray_line" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_wednesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_4sdp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_wednesday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_10sdp"
+                                        android:src="@drawable/wall_clock_x1" />
+
+
+                                    <TextView
+                                        android:id="@+id/wednesday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="28/04"
+                                        android:textColor="@color/text_gray" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/arrow_wednesday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:src="@drawable/right_arrow_x1" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray_line"
+                                android:elevation="@dimen/_2sdp" />
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Wednesday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/gray_line" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_thursday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_4sdp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_thursday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_10sdp"
+                                        android:src="@drawable/wall_clock_x1" />
+
+
+                                    <TextView
+                                        android:id="@+id/thursday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="28/04"
+                                        android:textColor="@color/text_gray" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/arrow_thursday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:src="@drawable/right_arrow_x1" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray_line"
+                                android:elevation="@dimen/_2sdp" />
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Thursday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/gray_line" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_friday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_4sdp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_friday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_10sdp"
+                                        android:src="@drawable/wall_clock_x1" />
+
+
+                                    <TextView
+                                        android:id="@+id/friday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="28/04"
+                                        android:textColor="@color/text_gray" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/arrow_friday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:src="@drawable/right_arrow_x1" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray_line"
+                                android:elevation="@dimen/_2sdp" />
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/friday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/gray_line" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_saturday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_4sdp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_saturday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_10sdp"
+                                        android:src="@drawable/wall_clock_x1" />
+
+
+                                    <TextView
+                                        android:id="@+id/saturday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="28/04"
+                                        android:textColor="@color/text_gray" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/arrow_saturday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:src="@drawable/right_arrow_x1" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray_line"
+                                android:elevation="@dimen/_2sdp" />
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Saturday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/gray_line" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_sunday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="@dimen/_4sdp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_sunday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_10sdp"
+                                        android:src="@drawable/wall_clock_x1" />
+
+
+                                    <TextView
+                                        android:id="@+id/sunday"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="28/04"
+                                        android:textColor="@color/text_gray" />
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/arrow_sunday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:src="@drawable/right_arrow_x1" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray_line"
+                                android:elevation="@dimen/_2sdp" />
+
+                            <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                                android:id="@+id/Sunday_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <ListView
+                        android:id="@+id/lv_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </ListView>
+
+
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/layout_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+         <!--   <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent">
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_29sdp"
+                            android:background="#FAFBFD"></View>
+
+                        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            app:mcv_arrowColor="@color/text_gray"
+                            app:mcv_headerTextAppearance="@style/CustomTextAppearance"
+                            app:mcv_leftArrowMask="@drawable/left_arrow_x1"
+                            app:mcv_rightArrowMask="@drawable/right_arrow_x1"
+                            app:mcv_selectionColor="@android:color/holo_red_light"
+                            app:mcv_showOtherDates="all"
+                            app:mcv_tileHeight="@dimen/_28sdp"
+                            app:mcv_weekDayTextAppearance="@style/CustomTextAppearance"></com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+
+
+                    </RelativeLayout>
+
+
+                    <ListView
+                        android:id="@+id/lv_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="0dp"></ListView>
+
+
+                </LinearLayout>
+
+  <!--          </ScrollView>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

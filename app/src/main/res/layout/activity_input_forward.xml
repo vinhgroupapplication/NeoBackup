@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.newsaigonsoft.neoegov.Action.InputForward.InputForwardActivity">
+
+    <RelativeLayout
+        android:id="@+id/parent_app_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/app_bar" />
+    </RelativeLayout>
+
+    <com.newsaigonsoft.neoegov.CustomViewListExpand.CustomFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:paddingLeft="@dimen/_6sdp"
+        android:paddingRight="@dimen/_6sdp">
+        <!--
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/croll_view"
+                    android:isScrollContainer="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/parent_app_bar"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical"
+                    android:stackFromBottom="true">-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- <newsaigonsoft.com.neoegov.CustomViewListExpand.NonScrollListView
+                     android:id="@+id/lv_process_person"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="5dp">
+                 </newsaigonsoft.com.neoegov.CustomViewListExpand.NonScrollListView> -->
+
+
+                <LinearLayout
+                    android:id="@+id/part_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày phê duyệt BGĐ" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" (*)"
+                            android:textColor="#ff0900" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/approve_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/background_edittext_troke"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/chi_dao_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:button="@drawable/checkbox_selector"
+                        android:text=" Chỉ đạo"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Nội dung chỉ đạo"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/background_edittext_troke"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Ghi chú:"
+                        android:textColor="@color/text_gray" />
+
+                    <EditText
+                        android:id="@+id/process_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/gray"
+                        android:gravity="left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Người xử lý:"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/process_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#000000"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Ngày xử lý:" />
+
+                        <TextView
+                            android:id="@+id/time_process"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Giờ và ngày hiện tại"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/choose_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_edittext_troke"
+                            android:padding="10dp"
+                            android:text="+ Chọn"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView
+                            android:id="@+id/attach_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"></com.newsaigonsoft.neoegov.CustomViewListExpand.NonScrollListView>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Gửi thông báo"
+                        android:textColor="@color/text_gray" />
+
+
+                    <CheckBox
+                        android:id="@+id/email_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/check_box_details"
+                        android:text=" Gửi email" />
+
+                    <CheckBox
+                        android:id="@+id/khan_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/check_box_details"
+                        android:text=" Khẩn" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/_13sdp"
+                    android:paddingRight="@dimen/_13sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp">
+
+                                <LinearLayout
+                                    android:id="@+id/check_all"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/cb_choose_all"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/check_box_details" />
+
+                                    <TextView
+                                        android:textColor="@android:color/black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Chọn người nhận " />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_2sdp"
+                                        android:text="(*)"
+                                        android:textColor="@color/end_dialog" />
+                                </LinearLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/img_search_start"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_10sdp"
+                                        android:src="@drawable/search_x1" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray" />
+
+                            <SearchView
+                                android:id="@+id/search_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="#FAFBFD"
+                                android:gravity="center"
+                                android:iconifiedByDefault="false"
+                                android:imeOptions="actionSearch|flagNoExtractUi|flagNoFullscreen"
+                                android:searchHintIcon="@null"
+                                android:searchIcon="@null"
+                                android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <!-- <RelativeLayout
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content">-->
+                                <!--</RelativeLayout>-->
+
+                                <!--      <android.support.v7.widget.CardView
+                                          android:id="@+id/card_view"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:foreground="?android:attr/selectableItemBackground"
+                                          app:cardBackgroundColor="@android:color/transparent"
+                                          card_view:cardCornerRadius="4dp"
+                                          card_view:cardElevation="3dp"
+                                          card_view:cardUseCompatPadding="true">-->
+
+                                <ListView
+                                    android:id="@+id/lv_process_person"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:nestedScrollingEnabled="true"></ListView>
+                                <!--      </android.support.v7.widget.CardView>-->
+
+
+                                <!-- Form Search -->
+                                <RelativeLayout
+                                    android:id="@+id/rlSearch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/tvDone"
+                                        android:clickable="false"
+                                        android:gravity="right"
+                                        android:orientation="horizontal">
+
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvDone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:background="@color/colorTextSearch"
+                                        android:text="Xong"
+                                        android:textColor="#ffffff"
+                                        android:textSize="18sp"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="@dimen/_10sdp">
+
+                                    <TextView
+                                        android:id="@+id/button_forward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:background="@drawable/gradient_cornor_blue"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:lines="1"
+                                        android:paddingBottom="@dimen/_10sdp"
+                                        android:paddingLeft="@dimen/_30sdp"
+                                        android:paddingRight="@dimen/_30sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:text="Chuyển khác"
+                                        android:textColor="#ffffff" />
+
+                                    <TextView
+                                        android:id="@+id/cancel_forward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:background="@drawable/gradient_cornor_white"
+                                        android:gravity="center"
+                                        android:paddingBottom="@dimen/_10sdp"
+                                        android:paddingLeft="@dimen/_25sdp"
+                                        android:paddingRight="@dimen/_25sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:text="Hủy"
+                                        android:textColor="#000000" />
+
+
+                                    <TextView
+                                        android:id="@+id/save_and_send"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/gradient_cornor_white"
+                                        android:gravity="center"
+                                        android:paddingBottom="@dimen/_10sdp"
+                                        android:paddingLeft="@dimen/_20sdp"
+                                        android:paddingRight="@dimen/_20sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:text="Lưu và gửi"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ff0"
+                    android:orientation="vertical"
+                    android:visibility="gone"></LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.newsaigonsoft.neoegov.CustomViewListExpand.CustomFrameLayout>
+</LinearLayout>

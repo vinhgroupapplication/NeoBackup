@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6C64B9"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/statictical_home" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spn_select"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="#ffffff"
+                android:gravity="left"
+                android:overlapAnchor="false"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="7dp"
+            android:gravity="center_vertical|right"
+            android:text="Tổng 100 nhiệm vụ"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chưa xử lý"
+                        android:textColor="#000000" />
+
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#BCA0EC"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#BCA0EC"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/department_processed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chưa xử lý"
+                        android:textColor="#000000" />
+
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#0090ff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#0090ff"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/department_unprocess"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bgchart_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Đúng hạn" />
+
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#68ee3b"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/department_ontime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#3de29a"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Trễ hạn" />
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#FE6E4C"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/department_delays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#FE6E4C"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Trong hạn" />
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#0090ff"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/department_indue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#0090ff"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Quá hạn" />
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#FFB239"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/department_out_of_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#FFB239"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray_line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_1sdp"
+            android:paddingTop="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Nhiệm vụ cần phối hợp"
+                android:textColor="@android:color/black" />
+
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_5sdp"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingBottom="@dimen/_2sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingTop="@dimen/_2sdp"
+                app:backgroundColor="#8FAABD"
+                app:cornerRadius="@dimen/_11sdp"
+                app:foregroundColor="@color/colorAccent"
+                app:shadowColor="#8FAABD"
+                app:shadowMargin="@dimen/_5sdp"
+                app:shadowRadius="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/department_party"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_14sdp" />
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray_line"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/header_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Đã xử lý"
+                        android:textColor="#000000" />
+
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#BCA0EC"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#BCA0EC"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/person_processed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chưa xử lý"
+                        android:textColor="#000000" />
+
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#0090ff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#0090ff"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/person_unprocess"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray_line"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/content_task"
+                android:layout_alignTop="@id/content_task"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bgchart_color" />
+
+            <LinearLayout
+                android:id="@+id/content_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Đúng hạn" />
+
+
+                    <com.loopeer.shadow.ShadowView
+                        android:id="@+id/shadowProcessed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#68ee3b"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/person_ontime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#3de29a"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Trễ hạn" />
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#FE6E4C"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/person_delays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#FE6E4C"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Trong hạn" />
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#0090ff"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/person_indue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#0090ff"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+                </LinearLayout>
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:paddingTop="@dimen/_1sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Quá hạn" />
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        app:backgroundColor="#ffffff"
+                        app:cornerRadius="@dimen/_11sdp"
+                        app:foregroundColor="@color/colorAccent"
+                        app:shadowColor="#FFB239"
+                        app:shadowMargin="@dimen/_5sdp"
+                        app:shadowRadius="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/person_out_of_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#FFB239"
+                            android:textSize="@dimen/_14sdp" />
+                    </com.loopeer.shadow.ShadowView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:background="@color/gray_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

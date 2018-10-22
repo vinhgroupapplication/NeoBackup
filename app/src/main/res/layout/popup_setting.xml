@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/setting_name"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:text="Số dòng hiển thị"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_seek_bar"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/process_value_seekbar"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <SeekBar
+            android:max="50"
+            android:id="@+id/seek_bar_row_visible"
+            android:thumb="@drawable/thumb_image"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_loading_choose"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" >
+            <TextView
+                android:textColor="@color/colorButtonLoadingSetting"
+                android:id="@+id/one_minutes"
+                android:padding="3dp"
+                android:background="@drawable/setting_loading_bar"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:text="1 phút"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/colorButtonLoadingSetting"
+                android:id="@+id/two_minutes"
+                android:padding="3dp"
+                android:background="@drawable/setting_loading_bar"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:text="2 phút"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/colorButtonLoadingSetting"
+                android:id="@+id/three_minutes"
+                android:padding="3dp"
+                android:background="@drawable/setting_loading_bar"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:text="3 phút"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

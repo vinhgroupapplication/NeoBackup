@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.newsaigonsoft.neoegov">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--
+        <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".OfficalActivity.OfficalActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".fcm.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".DetailActivity.DetailForwardActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard" />
+        <activity
+            android:name=".SplashActivity.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Action.InputForward.InputForwardActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <receiver android:name=".Service.MyReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Service.SendDocumentService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false" />
+
+        <activity android:name=".TestActivity" />
+        <activity
+            android:name=".Action.ForwardDepartment.InputForwardDepartmentActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Action.Return.ReturnActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Action.ChangeHandle.InputChangeHandleActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Action.ConfirmConpleted.ConfirmCompletedActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Action.Remind.RemindActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Action.AddTrainfer.AddTrainferActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Action.Cancel.CancelActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Action.FeedBack.FeedBackActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Action.Extend.ExtendActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".OtherActivity.OtherActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".SearchActivity.SeachActivity" />
+        <activity android:name=".NotifyAcitivity.NotifyActivity" />
+        <activity android:name=".SupportActivity.SupportActivity" />
+        <activity android:name=".ChangeInforActivity.ChangeInforActivity" />
+        <activity android:name=".GuideActivity.GuideActivity" />
+        <activity android:name=".FeedBackAppActivity.FeedBackAppActivity" />
+        <activity android:name=".AppInforActivity.AppInforActivity" />
+        <activity android:name=".AboutActivity.AboutActivity" />
+        <activity android:name=".SchedulePSActivity.SchedulePSActivity" />
+        <activity android:name=".ScheduleDetailActivity.ScheduleDetailActivity"></activity>
+    </application>
+
+</manifest>

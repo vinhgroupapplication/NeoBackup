@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search_button"
+        android:icon="@drawable/bar_search_x1"
+        android:title=""
+        android:visible="true"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/center_menu"
+        android:icon="@drawable/ic_more_vert_white_24dp"
+        android:title="nottitle"
+        android:visible="false"
+        app:showAsAction="always"></item>
+  <!--  <item
+        android:id="@+id/menu_config"
+        android:icon="@drawable/settings_x1"
+        android:orderInCategory="100"
+        android:title="Cấu hình"></item>
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@drawable/question_x1"
+        android:orderInCategory="100"
+        android:title="Trợ giúp"></item>-->
+    <item
+        android:id="@+id/menu_infor"
+        android:icon="@drawable/infors_x1"
+        android:orderInCategory="100"
+        android:title="Thông tin ứng dụng"></item>
+
+    <item
+        android:id="@+id/menu_notify"
+        android:icon="@drawable/actionbar_group_icon"
+        android:title="@string/group_title"
+        app:showAsAction="always" />
+
+
+    <!--<item
+        android:id="@+id/del_sendwaiting"
+        android:title="Del sendwaiting">
+
+    </item>
+    <item
+        android:id="@+id/del_inputperson"
+        android:title="Del inputperson"></item>-->
+</menu>

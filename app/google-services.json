@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "839779774701",
+    "firebase_url": "https://neoegov-b30ae.firebaseio.com",
+    "project_id": "neoegov-b30ae",
+    "storage_bucket": "neoegov-b30ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839779774701:android:946ca406adb107ba",
+        "android_client_info": {
+          "package_name": "newsaigonsoft.com.neoegov"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839779774701-hou329mq3r1iqq3k3hch35j6netc4ser.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAcj4zEgLL-rYnOZhgtoFkhpHdSp8TH1k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839779774701:android:36d5bfbe097adc17",
+        "android_client_info": {
+          "package_name": "com.newsaigonsoft.neoegov"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839779774701-hou329mq3r1iqq3k3hch35j6netc4ser.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAcj4zEgLL-rYnOZhgtoFkhpHdSp8TH1k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

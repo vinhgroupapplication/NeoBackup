@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".GuideActivity.GuideActivity">
+
+    <include layout="@layout/app_bar" />
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="#F7F8FA"
+        android:gravity="center"
+        android:iconifiedByDefault="false"
+        android:imeOptions="actionSearch|flagNoExtractUi|flagNoFullscreen"
+        android:queryHint="Từ khóa tìm kiếm..."
+        android:searchHintIcon="@null"
+        android:searchIcon="@null"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/lv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
+
+</LinearLayout>

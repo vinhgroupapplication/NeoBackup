@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:id="@+id/statistical_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/layout_number"
+                android:lineSpacingExtra="7dp"
+                android:text="Ban giám đốc"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+            <!--<LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:lineSpacingExtra="7dp"
+                    android:textColor="#000000"
+                    android:padding="2dp"
+                    android:text="Tổng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:lineSpacingExtra="7dp"
+                    android:id="@+id/statistical_total_row"
+                    android:textColor="#005599"
+                    android:padding="2dp"
+                    android:textSize="30dp"
+                    android:text="137"
+                    android:gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:lineSpacingExtra="7dp"
+                    android:textColor="#000000"
+                    android:padding="2dp"
+                    android:text="Văn bản đến"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:id="@+id/layout_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ontime_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_ontime"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:lineSpacingExtra="7dp"
+                    android:text="Đúng hạn" />
+
+
+                <TextView
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_green_conor"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:id="@+id/row_on_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:lineSpacingExtra="7dp"
+                    android:text="12" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/center_line"
+                    android:text=" - "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/out_of_date_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/out_of_date_title"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:lineSpacingExtra="7dp"
+                    android:text="Trễ hạn" />
+
+                <TextView
+                    android:textColor="@android:color/white"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:background="@drawable/button_orange_conor"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/statistical_late_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:lineSpacingExtra="7dp"
+                    android:text="0" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

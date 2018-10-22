@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.newsaigonsoft.neoegov.Action.InputForward.InputForwardActivity">
+
+    <RelativeLayout
+        android:id="@+id/parent_app_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/app_bar_seach" />
+    </RelativeLayout>
+
+    <!--save_and_close Đồng ý -->
+
+    <com.newsaigonsoft.neoegov.CustomViewListExpand.CustomFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/parent_app_bar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/seach_parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:contentPadding="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/search_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tra cứu văn bản đến"
+                            android:textColor="#777777" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_advance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:text="Nâng cao"
+                                android:textColor="#d7d7ce" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/search_switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/SwitchCompatStyle" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/card_view">
+
+
+                    <ListView
+                        android:headerDividersEnabled="false"
+                        android:id="@+id/search_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></ListView>
+
+                    <LinearLayout
+                        android:id="@+id/layout_search_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.loopeer.shadow.ShadowView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="@dimen/_5sdp"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_3sdp"
+                            android:visibility="visible"
+                            app:backgroundColor="#0090ff"
+                            app:cornerRadius="@dimen/_17sdp"
+                            app:foregroundColor="@color/colorAccent"
+                            app:shadowColor="#0090ff"
+                            app:shadowMargin="@dimen/_5sdp"
+                            app:shadowRadius="@dimen/_3sdp">
+
+                            <TextView
+                                android:id="@+id/search_button_start"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:paddingLeft="@dimen/_30sdp"
+                                android:paddingRight="@dimen/_30sdp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:singleLine="true"
+                                android:text="Tra cứu"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_14sdp" />
+                        </com.loopeer.shadow.ShadowView>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/empty_seach_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/empty_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/search_empty_x1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/empty_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Không tìm thấy văn bản."
+                        android:textColor="#d1d1c8"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </com.newsaigonsoft.neoegov.CustomViewListExpand.CustomFrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statistical_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="7dp"
+                    android:text="Đoàn Đình Dân"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="7dp"
+                            android:padding="2dp"
+                            android:text="Tổng"
+                            android:textColor="@color/text_gray" />
+
+                        <TextView
+                            android:id="@+id/statistical_total_row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:lineSpacingExtra="7dp"
+                            android:padding="2dp"
+                            android:text="137"
+                            android:textColor="@color/text_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="7dp"
+                            android:padding="2dp"
+                            android:text="văn bản - Chưa xử lý"
+                            android:textColor="@color/text_gray" />
+
+                        <TextView
+                            android:id="@+id/not_process"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:background="@drawable/button_blue_cornor"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:text="7"
+                            android:textColor="@android:color/white" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/statistical_late_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|bottom"
+                        android:lineSpacingExtra="7dp"
+                        android:text="0"
+                        android:textColor="#DD0000"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <View
+            android:background="@color/gray"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_5sdp"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingBottom="@dimen/_2sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingTop="@dimen/_2sdp"
+                app:backgroundColor="#FEA101"
+                app:cornerRadius="@dimen/_11sdp"
+                app:foregroundColor="@color/colorAccent"
+                app:shadowColor="#FEA101"
+                app:shadowMargin="@dimen/_5sdp"
+                app:shadowRadius="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/out_of_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="23"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_14sdp" />
+            </com.loopeer.shadow.ShadowView>
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

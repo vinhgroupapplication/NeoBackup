@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn nhận được một văn bản từ: "
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/notify_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cù Thị Kim Oanh"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/_13sdp" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/notify_body"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:textSize="@dimen/_11sdp"
+        android:text="Luật ban hành qui định pháp luật"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/gray_line"
+            android:textSize="@dimen/_11sdp"
+            android:text="Nhận ngày: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/gray_line"
+            android:id="@+id/notify_time"
+            android:text="21/12/2017 16:08"
+            android:textSize="@dimen/_11sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

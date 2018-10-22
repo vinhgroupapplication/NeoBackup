@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <corners android:radius="1dp" />
+            <stroke
+                android:width="1dp"
+                android:color="@android:color/transparent" />
+            <gradient
+                android:angle="270"
+                android:centerColor="#77D751"
+                android:endColor="#77D751"
+                android:startColor="#77D751" />
+            <size
+                android:width="20dp"
+                android:height="20dp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/baseline_done_white_18" />
+</layer-list>

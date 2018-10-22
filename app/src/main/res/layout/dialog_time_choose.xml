@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_cornor"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_20sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_top_bg_green"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/current_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="2018"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/current_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Thứ 5, 25 Tháng 5"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgpopup"
+        android:orientation="horizontal" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:layout_width="wrap_content"
+        app:mcv_arrowColor="@color/text_gray"
+        app:mcv_leftArrowMask="@drawable/left_arrow_x1"
+        app:mcv_rightArrowMask="@drawable/right_arrow_x1"
+        android:id="@+id/calendarView"
+        app:mcv_headerTextAppearance="@style/CustomTextAppearance"
+        app:mcv_weekDayTextAppearance="@style/CustomTextAppearance"
+        app:mcv_selectionColor="@android:color/holo_red_light"
+        android:layout_height="wrap_content">
+    </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+
+    <!--<com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:abbreviationsLabelsColor="@android:color/black"
+        app:forwardButtonSrc="@drawable/ic_chevron_right_black_24dp"
+        app:headerColor="#fafafa"
+        app:headerLabelColor="#000000"
+        app:previousButtonSrc="@drawable/ic_chevron_left_black_24dp"
+        app:selectionColor="#cc0000"
+        app:type="one_day_picker"
+        app:todayLabelColor="#cc0000" />-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_color_green"
+            android:elevation="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:text="Xong"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@android:color/white"
+            android:paddingBottom="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:text="Hủy"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
